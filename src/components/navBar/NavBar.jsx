@@ -29,7 +29,7 @@ const NavBar = () => {
         <EmailOutlinedIcon />
         <NotificationsOutlinedIcon />
         <div className="user">
-          <img src="https://picsum.photos/30" />
+          <img src="https://picsum.photos/100" />
           <span>CXR</span>
         </div>
       </div>
