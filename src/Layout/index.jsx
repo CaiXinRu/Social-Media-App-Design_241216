@@ -1,12 +1,13 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import LeftBar from "../components/leftBar/LeftBar";
-import NavBar from "../components/navBar/navBar";
-import RightBar from "../components/rightBar/rightBar";
+import NavBar from "../components/navBar/NavBar";
+import RightBar from "../components/rightBar/RightBar";
+import "../style.scss";
 
 const Layout = () => {
   return (
-    <div>
+    <div className="theme-dark">
       <NavBar />
       <div style={{ display: "flex" }}>
         <LeftBar />
