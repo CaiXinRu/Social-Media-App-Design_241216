@@ -10,9 +10,10 @@ import "./post.scss";
 
 const Post = ({ post }) => {
   const [commentOpen, setCommentOpen] = useState(false);
+  const [liked, setLiked] = useState(false);
 
   // TEMPORARY
-  const liked = false;
+  // const liked = false;
 
   return (
     <div className="post">
@@ -37,7 +38,7 @@ const Post = ({ post }) => {
           <img src={post.img} alt="" />
         </div>
         <div className="info">
-          <div className="item">
+          <div className="item" onClick={() => setLiked(!liked)}>
             {liked ? <FavoriteOutlinedIcon /> : <FavoriteBorderOutlinedIcon />}
             12 Likes
           </div>
