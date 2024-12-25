@@ -12,7 +12,7 @@ export const AuthContextProvider = ({ children }) => {
     setCurrentUser({
       id: 1,
       name: "Carol",
-      profilePic: "https://picsum.photos/100",
+      profilePic: "https://picsum.photos/550",
     });
   };
 
