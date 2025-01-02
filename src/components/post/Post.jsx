@@ -3,6 +3,7 @@ import FavoriteOutlinedIcon from "@mui/icons-material/FavoriteOutlined";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
 import TextsmsOutlinedIcon from "@mui/icons-material/TextsmsOutlined";
+import moment from "moment";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Comments from "../comments/Comments";
@@ -27,7 +28,7 @@ const Post = ({ post }) => {
                 style={{ textDecoration: "none", color: "inherit" }}
               >
                 <span className="name">{post.name}</span>
-                <div className="date">1 min ago</div>
+                <div className="date">{moment(post.createdAt).fromNow()}</div>
               </Link>
             </div>
           </div>
@@ -35,7 +36,7 @@ const Post = ({ post }) => {
         </div>
         <div className="content">
           <p>{post.desc}</p>
-          <img src={post.img} alt="" />
+          <img src={"./upload/" + post.img} alt="" />
         </div>
         <div className="info">
           <div className="item" onClick={() => setLiked(!liked)}>
