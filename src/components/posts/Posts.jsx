@@ -4,10 +4,11 @@ import { makeRequest } from "../../axios";
 import Post from "../post/Post";
 import "./posts.scss";
 
-const Posts = () => {
+const Posts = ({ userId }) => {
   const { isLoading, error, data } = useQuery({
     queryKey: ["posts"],
-    queryFn: () => makeRequest.get("/posts").then((res) => res.data),
+    queryFn: () =>
+      makeRequest.get("/posts?userId=" + userId).then((res) => res.data),
   });
 
   return (
