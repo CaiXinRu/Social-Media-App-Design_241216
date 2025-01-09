@@ -22,7 +22,9 @@ const NavBar = () => {
         <Link to="/" style={{ textDecoration: "none" }}>
           <span>RUSocial</span>
         </Link>
-        <HomeOutlinedIcon />
+        <Link to="/">
+          <HomeOutlinedIcon />
+        </Link>
         {darkMode ? (
           <DarkModeOutlinedIcon onClick={toggle} />
         ) : (
